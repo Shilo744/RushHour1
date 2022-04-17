@@ -64,12 +64,6 @@ public class Rectangle extends JPanel {
     public void setColor(Color color) {
         this.color = color;
     }
-    public void mouseDragged(MouseEvent e) {
-
-    }
-    public void mouseMoved(MouseEvent e) {
-
-    }
 
     public class Movement implements MouseMotionListener {
 
