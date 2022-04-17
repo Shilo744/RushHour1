@@ -1,4 +1,7 @@
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.image.ImageObserver;
 
 public class Window extends JFrame {
@@ -9,18 +12,15 @@ public class Window extends JFrame {
         Window window = new Window();
     }
 
-    public Window(){
+    public Window() {
         this.setTitle("RUSH HOUR");
-        this.setSize(WINDOW_WIDTH,WINDOW_HEIGHT);
+        this.setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         this.setResizable(false);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setLayout(null);
         this.setVisible(true);
-        GameScene gameScene = new GameScene(0,0,WINDOW_WIDTH, WINDOW_HEIGHT);
+        GameScene gameScene = new GameScene(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
         this.add(gameScene);
-
-
     }
-
 }

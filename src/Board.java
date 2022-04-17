@@ -1,9 +1,9 @@
 import java.awt.*;
 public class Board {
 
-   public final int LINE_THICKNESS=8;
-   public final int BOARD_START_X=75;
-   public final int BOARD_START_Y=30;
+   public final static int LINE_THICKNESS=12;
+   public final static int BOARD_START_X=75;
+   public final static int BOARD_START_Y=30;
    public final int BOARD_WIDTH_HEIGHT=720;
    public final int LINE_DISTANCE=120;
 
@@ -48,6 +48,5 @@ public class Board {
         this.line15.paint(graphics);
 
     }
-
 }
 

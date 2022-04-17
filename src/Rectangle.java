@@ -1,6 +1,9 @@
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 
-public class Rectangle {
+public class Rectangle extends JPanel {
         private int x;
         private int y;
         private int width;
@@ -12,7 +15,6 @@ public class Rectangle {
         graphics.fillRect(this.x, this.y, this.width,this.height);
     }
 
-
         public Rectangle(int x, int y, int width, int height, Color color){
             this.x = x;
             this.y = y;
@@ -20,13 +22,8 @@ public class Rectangle {
             this.height = height;
             this.color = color;
         }
-
-        public void canMoveX(){
-
-        }
-        public void canMoveY(){
-
-        }
+    public Rectangle(){
+    }
 
     public int getX() {
         return x;
@@ -66,5 +63,24 @@ public class Rectangle {
 
     public void setColor(Color color) {
         this.color = color;
+    }
+    public void mouseDragged(MouseEvent e) {
+
+    }
+    public void mouseMoved(MouseEvent e) {
+
+    }
+
+    public class Movement implements MouseMotionListener {
+
+        public void mouseDragged(MouseEvent e) {
+            System.out.println("hello");
+            x=e.getX();
+            y=e.getY();
+            repaint();
+        }
+        public void mouseMoved(MouseEvent e) {
+
+        }
     }
 }
